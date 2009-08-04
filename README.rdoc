@@ -1,0 +1,7 @@
+= Complex Form Examples
+
+This master branch is a simple solution for the multi-model form problem using the latest @accepts_nested_attributes_for@ available in Rails 2.3. See branches for alternative solutions.
+
+Once you clone the repository, you can checkout a remote branch like this
+
+  git checkout -b deep origin/deep
