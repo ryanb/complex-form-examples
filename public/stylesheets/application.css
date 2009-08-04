@@ -68,15 +68,22 @@ body {
   background-color: #c00;
   color: #fff;
 }
+
 #errorExplanation p {
   color: #333;
   margin-bottom: 0;
   padding: 8px;
 }
+
 #errorExplanation ul {
   margin: 2px 24px;
 }
+
 #errorExplanation ul li {
   font-size: 12px;
   list-style: disc;
+}
+
+.field {
+  margin: 8px 0;
 }
