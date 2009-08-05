@@ -6,3 +6,11 @@ function insert_fields(element_id, content) {
     bottom: content.replace(/NEW_RECORD/g, new_id)
   });
 }
+
+function remove_fields(link) {
+  var hidden_field = $(link).previous("input[type=hidden]");
+  if (hidden_field) {
+    hidden_field.value = '1';
+  }
+  $(link).up(".field").remove();
+}
