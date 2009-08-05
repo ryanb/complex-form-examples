@@ -6,11 +6,9 @@
   </p>
   
   <h3>Tasks</h3>
-  <div id="tasks">
   <% f.fields_for :tasks do |task_form| %>
     <%= render :partial => 'task', :locals => { :f => task_form } %>
   <% end %>
-  </div>
-  <p><%= add_task_link "New Task", f %></p>
+  <p><%= add_child_link "New Task", f, :tasks %></p>
   <p><%= f.submit "Submit" %></p>
 <% end %>
