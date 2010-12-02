@@ -13,5 +13,5 @@ function remove_fields(link) {
   if (hidden_field) {
     hidden_field.value = '1';
   }
-  $(link).up(".fields").hide();
+  $(link).up(".fields").fade();
 }
