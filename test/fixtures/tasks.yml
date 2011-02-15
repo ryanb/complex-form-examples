@@ -1,9 +1,0 @@
-one:
-  project_id: 1
-  name: MyString
-  due_at: 2008-07-18 13:59:08
-
-two:
-  project_id: 1
-  name: MyString
-  due_at: 2008-07-18 13:59:08
