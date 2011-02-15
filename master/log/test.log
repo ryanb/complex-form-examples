@@ -1,0 +1,164 @@
+# Logfile created on Tue Feb 15 10:36:35 -0800 2011
+
+Processing ProjectsController#create (for 0.0.0.0 at 2011-02-15 10:36:52) [POST]
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_task (3.9ms)
+Rendered projects/_form (11.4ms)
+Completed in 18ms (View: 16, DB: 1) | 200 OK [http://test.host/projects]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2011-02-15 10:36:52) [POST]
+  [4;36;1mProject Create (0.4ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at") VALUES(NULL, '2011-02-15 18:36:52', '2011-02-15 18:36:52')[0m
+Redirected to http://test.host/projects/980190963
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/projects]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" LIMIT 1[0m
+
+
+Processing ProjectsController#destroy (for 0.0.0.0 at 2011-02-15 10:36:52) [DELETE]
+  Parameters: {"id"=>#<Project id: 298486374, name: "MyString", created_at: "2011-02-15 18:36:52", updated_at: "2011-02-15 18:36:52">}
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 298486374) [0m
+  [4;35;1mTask Load (64.9ms)[0m   [0mSELECT * FROM "tasks" WHERE ("tasks".project_id = 298486374) [0m
+  [4;36;1mProject Destroy (0.3ms)[0m   [0;1mDELETE FROM "projects" WHERE "id" = 298486374[0m
+Redirected to http://test.host/projects
+Completed in 68ms (DB: 66) | 302 Found [http://test.host/projects/298486374]
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."id" = 298486374) LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" LIMIT 1[0m
+
+
+Processing ProjectsController#edit (for 0.0.0.0 at 2011-02-15 10:36:52) [GET]
+  Parameters: {"id"=>#<Project id: 298486374, name: "MyString", created_at: "2011-02-15 18:36:52", updated_at: "2011-02-15 18:36:52">}
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 298486374) [0m
+Rendering template within layouts/application
+Rendering projects/edit
+  [4;36;1mTask Load (0.1ms)[0m   [0;1mSELECT * FROM "tasks" WHERE ("tasks".project_id = 298486374) [0m
+Rendered projects/_task (1.2ms)
+Rendered projects/_form (6.4ms)
+Completed in 10ms (View: 9, DB: 1) | 200 OK [http://test.host/projects/298486374/edit]
+
+
+Processing ProjectsController#index (for 0.0.0.0 at 2011-02-15 10:36:52) [GET]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://test.host/projects]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2011-02-15 10:36:52) [GET]
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_task (1.1ms)
+Rendered projects/_form (4.9ms)
+Completed in 7ms (View: 7, DB: 0) | 200 OK [http://test.host/projects/new]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" LIMIT 1[0m
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2011-02-15 10:36:52) [GET]
+  Parameters: {"id"=>#<Project id: 298486374, name: "MyString", created_at: "2011-02-15 18:36:52", updated_at: "2011-02-15 18:36:52">}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 298486374) [0m
+Rendering template within layouts/application
+Rendering projects/show
+  [4;36;1mTask Load (0.1ms)[0m   [0;1mSELECT * FROM "tasks" WHERE ("tasks".project_id = 298486374) [0m
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://test.host/projects/298486374]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" LIMIT 1[0m
+
+
+Processing ProjectsController#update (for 0.0.0.0 at 2011-02-15 10:36:52) [PUT]
+  Parameters: {"id"=>#<Project id: 298486374, name: "MyString", created_at: "2011-02-15 18:36:52", updated_at: "2011-02-15 18:36:52">}
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 298486374) [0m
+Rendering template within layouts/application
+Rendering projects/edit
+  [4;35;1mTask Load (0.1ms)[0m   [0mSELECT * FROM "tasks" WHERE ("tasks".project_id = 298486374) [0m
+Rendered projects/_task (1.1ms)
+Rendered projects/_form (5.9ms)
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://test.host/projects/298486374]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" LIMIT 1[0m
+
+
+Processing ProjectsController#update (for 0.0.0.0 at 2011-02-15 10:36:52) [PUT]
+  Parameters: {"id"=>#<Project id: 298486374, name: "MyString", created_at: "2011-02-15 18:36:52", updated_at: "2011-02-15 18:36:52">}
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 298486374) [0m
+Redirected to http://test.host/projects/298486374
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/projects/298486374]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2011-02-15 10:37:19) [POST]
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_task (4.0ms)
+Rendered projects/_form (11.6ms)
+Completed in 19ms (View: 16, DB: 1) | 200 OK [http://test.host/projects]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2011-02-15 10:37:19) [POST]
+  [4;36;1mProject Create (0.4ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at") VALUES(NULL, '2011-02-15 18:37:19', '2011-02-15 18:37:19')[0m
+Redirected to http://test.host/projects/980190963
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/projects]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" LIMIT 1[0m
+
+
+Processing ProjectsController#destroy (for 0.0.0.0 at 2011-02-15 10:37:19) [DELETE]
+  Parameters: {"id"=>#<Project id: 298486374, name: "MyString", created_at: "2011-02-15 18:37:19", updated_at: "2011-02-15 18:37:19">}
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 298486374) [0m
+  [4;35;1mTask Load (64.4ms)[0m   [0mSELECT * FROM "tasks" WHERE ("tasks".project_id = 298486374) [0m
+  [4;36;1mProject Destroy (0.3ms)[0m   [0;1mDELETE FROM "projects" WHERE "id" = 298486374[0m
+Redirected to http://test.host/projects
+Completed in 67ms (DB: 65) | 302 Found [http://test.host/projects/298486374]
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."id" = 298486374) LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" LIMIT 1[0m
+
+
+Processing ProjectsController#edit (for 0.0.0.0 at 2011-02-15 10:37:19) [GET]
+  Parameters: {"id"=>#<Project id: 298486374, name: "MyString", created_at: "2011-02-15 18:37:19", updated_at: "2011-02-15 18:37:19">}
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 298486374) [0m
+Rendering template within layouts/application
+Rendering projects/edit
+  [4;36;1mTask Load (0.1ms)[0m   [0;1mSELECT * FROM "tasks" WHERE ("tasks".project_id = 298486374) [0m
+Rendered projects/_task (1.4ms)
+Rendered projects/_form (6.6ms)
+Completed in 10ms (View: 9, DB: 1) | 200 OK [http://test.host/projects/298486374/edit]
+
+
+Processing ProjectsController#index (for 0.0.0.0 at 2011-02-15 10:37:19) [GET]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://test.host/projects]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2011-02-15 10:37:19) [GET]
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_task (1.1ms)
+Rendered projects/_form (4.9ms)
+Completed in 7ms (View: 7, DB: 0) | 200 OK [http://test.host/projects/new]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" LIMIT 1[0m
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2011-02-15 10:37:19) [GET]
+  Parameters: {"id"=>#<Project id: 298486374, name: "MyString", created_at: "2011-02-15 18:37:19", updated_at: "2011-02-15 18:37:19">}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 298486374) [0m
+Rendering template within layouts/application
+Rendering projects/show
+  [4;36;1mTask Load (0.1ms)[0m   [0;1mSELECT * FROM "tasks" WHERE ("tasks".project_id = 298486374) [0m
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://test.host/projects/298486374]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" LIMIT 1[0m
+
+
+Processing ProjectsController#update (for 0.0.0.0 at 2011-02-15 10:37:19) [PUT]
+  Parameters: {"id"=>#<Project id: 298486374, name: "MyString", created_at: "2011-02-15 18:37:19", updated_at: "2011-02-15 18:37:19">}
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 298486374) [0m
+Rendering template within layouts/application
+Rendering projects/edit
+  [4;35;1mTask Load (0.1ms)[0m   [0mSELECT * FROM "tasks" WHERE ("tasks".project_id = 298486374) [0m
+Rendered projects/_task (1.1ms)
+Rendered projects/_form (5.9ms)
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://test.host/projects/298486374]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" LIMIT 1[0m
+
+
+Processing ProjectsController#update (for 0.0.0.0 at 2011-02-15 10:37:19) [PUT]
+  Parameters: {"id"=>#<Project id: 298486374, name: "MyString", created_at: "2011-02-15 18:37:19", updated_at: "2011-02-15 18:37:19">}
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 298486374) [0m
+Redirected to http://test.host/projects/298486374
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/projects/298486374]

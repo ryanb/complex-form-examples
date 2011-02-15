@@ -1,0 +1,15 @@
+<% form_for @project do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  
+  <h3>Tasks</h3>
+  <% f.fields_for :tasks do |task_form| %>
+    <%= render :partial => 'task', :locals => { :f => task_form } %>
+  <% end %>
+  <p><%= add_child_link "New Task", :tasks %></p>
+  <%= new_child_fields_template(f, :tasks)%>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

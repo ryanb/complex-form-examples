@@ -1,12 +1,3 @@
-= Complex Form Examples
+= Complex Form Examples Rails 2 Archive
 
-This master branch is a simple solution for the multi-model form problem using the latest +accepts_nested_attributes_for+ available in Rails 2.3.
-
-Once you clone this repository, just run the migrations and start up the server to try it out.
-
-  rake db:migrate
-  script/server
-
-See the branches for alternative solutions. Here's how to clone a remote branch.
-
-  git checkout -b deep origin/deep
+This is an archive of the old complex form example branches. The "master" directory contains the original master branch which works with Rails 2.3.9. The "deep" directory also works with 2.3.9. The others are not as up to date.

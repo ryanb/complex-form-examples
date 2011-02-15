@@ -1,0 +1,12 @@
+<div class="fields">
+  <%= f.label :owner %>
+  <%= f.text_field :owner %>
+  <%= remove_child_link "remove", f %>
+  <div class="children_fields">
+    <% f.fields_for :steps do |step_form| %>
+      <%= render :partial => 'step', :locals => { :f => step_form } %>
+    <% end %>
+    <p><%= add_child_link "New Step", :steps %></p>
+    <%= new_child_fields_template(f, :steps)%>
+  </div>
+</div>

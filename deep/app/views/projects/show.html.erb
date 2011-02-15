@@ -1,0 +1,36 @@
+<% title "Project" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @project.name %>
+</p>
+
+<h3>Tasks</h3>
+
+<ul>
+  <% for task in @project.tasks %>
+    <li>
+      <%=h task.name %>
+      <ul>
+        <% for assignment in task.assignments %>
+          <li>
+            <%=h assignment.owner %>
+            <ul>
+              <% for step in assignment.steps %>
+                <li>
+                  <%=h step.name %>
+                </li>
+              <% end %>
+            </ul>
+          </li>
+        <% end %>
+      </ul>
+    </li>
+  <% end %>
+</ul>
+
+<p>
+  <%= link_to "Edit", edit_project_path(@project) %> |
+  <%= link_to "Destroy", @project, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", projects_path %>
+</p>

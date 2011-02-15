@@ -1,0 +1,14 @@
+= Complex Form Examples
+
+A simple solution for the multi-model form problem using the latest +accepts_nested_attributes_for+ available in Rails 2.3. This version uses unobtrusive JavaScript with jQuery and HTML 5.
+
+Once you clone this repository, just run the migrations and start up the server to try it out.
+
+  rake db:migrate
+  script/server
+
+See the branches for alternative solutions. Here's how to clone a remote branch.
+
+  git checkout -b deep origin/deep
+
+Special thanks to Tim Riley and Eloy Duran.

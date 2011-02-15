@@ -1,0 +1,10 @@
+= Complex Form Example: Deep Nesting
+
+This solution uses the +accepts_nested_attributes_for+ which was introduced in Rails 2.3. It supports any level of depth in nesting models. This version uses unobtrusive JavaScript with jQuery and HTML 5.
+
+Once you clone this repository, just run the migrations and start up the server to try it out.
+
+  rake db:migrate
+  script/server
+
+Special thanks to Tim Riley and Eloy Duran.

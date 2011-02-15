@@ -1,0 +1,12 @@
+<div class="fields">
+  <%= f.label :name, "Task" %>
+  <%= f.text_field :name %>
+  <%= remove_child_link "remove", f %>
+  <div class="children_fields">
+    <% f.fields_for :assignments do |assignment_form| %>
+      <%= render :partial => 'assignment', :locals => { :f => assignment_form } %>
+    <% end %>
+    <p><%= add_child_link "New Assignment", :assignments %></p>
+    <%= new_child_fields_template(f, :assignments)%>
+  </div>
+</div>
