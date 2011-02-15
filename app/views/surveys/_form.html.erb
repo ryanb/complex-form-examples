@@ -1,0 +1,12 @@
+<%= form_for @survey do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <%= f.fields_for :questions do |builder| %>
+    <%= render "question_fields", :f => builder %>
+  <% end %>
+  <p><%= link_to_add_fields "Add Question", f, :questions %></p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>
