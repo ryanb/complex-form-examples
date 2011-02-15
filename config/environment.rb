@@ -5,7 +5,7 @@
 # ENV['RAILS_ENV'] ||= 'production'
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.9' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
@@ -44,8 +44,8 @@ Rails::Initializer.run do |config|
   # Make sure the secret is at least 30 characters and all random, 
   # no regular words or you'll be exposed to dictionary attacks.
   config.action_controller.session = {
-    :session_key => '_todo_session',
-    :secret      => '9fb4f3ea8e03d52e92a5d7d7ba499b63ec6958475a1af316debe2d8a2e55454e306df4b061df63706338449654e9c27d9d618e4345591313ae19b234432f8ab3'
+    :key    => '_todo_session',
+    :secret => '9fb4f3ea8e03d52e92a5d7d7ba499b63ec6958475a1af316debe2d8a2e55454e306df4b061df63706338449654e9c27d9d618e4345591313ae19b234432f8ab3'
   }
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
