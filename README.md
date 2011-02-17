@@ -2,13 +2,17 @@
 
 This repository contains examples of complex nested model forms in Rails 3. To try it out clone this repository and run the following commands.
 
-  bundle
-  rake db:migrate
-  rails s
+<pre>
+bundle
+rake db:migrate
+rails s
+</pre>
 
 See the branches for different approaches. Run this command to check out another branch.
 
-  git checkout -b jquery origin/jquery
+<pre>
+git checkout -b jquery origin/jquery
+</pre>
 
 The `master` and `jquery` branches contain an approach demonstrated in Railscasts [episodes 196 and 197](http://railscasts.com/episodes/196-nested-model-form-part-1).
 
