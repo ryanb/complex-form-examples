@@ -3,7 +3,5 @@
   <%= f.text_area :content, :rows => 3 %><br />
   <%= f.link_to_remove "remove" %>
 </p>
-<%= f.fields_for :answers do |builder| %>
-  <%= render "answer_fields", :f => builder %>
-<% end %>
+<%= f.fields_for :answers %>
 <p><%= f.link_to_add "Add an answer", :answers %></p>
